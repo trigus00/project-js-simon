@@ -56,3 +56,41 @@ html {
 .simon-button.blue {
   background-color: #2185D0;
 }
+
+.simon-container .simon-button.green:hover
+{
+  box-shadow: 10px 10px 5px #178832;
+}
+.simon-container .simon-button.red:hover{
+  box-shadow: 10px 10px 5px #ac1f1f;
+}
+.simon-container .simon-button.blue:hover{
+  box-shadow: 10px 10px 5px #1966a1;
+}
+.simon-container .simon-button.yellow:hover{
+  box-shadow: 10px 10px 5px #d1a00d;
+}
+
+.simon-container .simon-button.green.pressed
+{
+  background-color : #136d28;
+  box-shadow : 0px 0px 0px;
+}
+
+.simon-container .simon-button.red.pressed
+{
+  background-color : #911c1c;
+  box-shadow : 0px 0px 0px;
+}
+
+.simon-container .simon-button.blue.pressed
+{
+  background-color : #145281;
+  box-shadow : 0px 0px 0px;
+}
+
+.simon-container .simon-button.yellow.pressed
+{
+  background-color : #bd910d;
+  box-shadow : 0px 0px 0px;
+}
