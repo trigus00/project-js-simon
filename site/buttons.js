@@ -19,12 +19,13 @@ greenButton.addEventListener('mousedown', function() {
 
   listOfButtons.push("green")
   pressCounter++;
+  compareList(listOfButtons, pressCounter)
 });
 greenButton.addEventListener('mouseup', function() {
   //console.log("you released the green button");
   greenButton.classList.remove('pressed');
   
-  displayListOfButtons()
+  //displayListOfButtons()
 });
 
 let redButton = document.querySelector('.simon-button.red');
@@ -38,11 +39,12 @@ redButton.addEventListener('mousedown', function() {
 
   listOfButtons.push("red")
   pressCounter++;
+  compareList(listOfButtons, pressCounter)
 });
 redButton.addEventListener('mouseup', function() {
   //console.log("you released the red button");
   redButton.classList.remove('pressed');
-  displayListOfButtons()
+  //displayListOfButtons()
 });
 
 let yellowButton = document.querySelector('.simon-button.yellow');
@@ -55,11 +57,12 @@ yellowButton.addEventListener('mousedown', function() {
 
   listOfButtons.push("yellow")
   pressCounter++
+  compareList(listOfButtons, pressCounter)
 });
 yellowButton.addEventListener('mouseup', function() {
   //console.log("you released the yellow button");
   yellowButton.classList.remove('pressed');
-  displayListOfButtons()
+  //displayListOfButtons()
 });
 
 let blueButton = document.querySelector('.simon-button.blue');
@@ -71,9 +74,10 @@ blueButton.addEventListener('mousedown', function() {
   blueButton.classList.add('pressed');
   listOfButtons.push("blue")
   pressCounter++;
+  compareList(listOfButtons, pressCounter)
 });
 blueButton.addEventListener('mouseup', function() {
   //console.log("you released the blue button");
   blueButton.classList.remove('pressed');
-  displayListOfButtons()
+  //displayListOfButtons()
 });

@@ -1,10 +1,9 @@
 // This file contains the game logic.
 // All the event-listening should happen in buttons.js
-function createList(listToFollow)
-{
+
+function createList(listToFollow) {
     let randomButton = Math.floor(Math.random() * 4);
-    switch(randomButton)
-    {
+    switch (randomButton) {
         case 0:
             listToFollow.push("green");
             break;
@@ -21,12 +20,19 @@ function createList(listToFollow)
     console.log(listToFollow);
 }
 
-function compareList(listOfInputs, pressCount)
-{
+function compareList(listOfInputs, pressCount) {
+    console.log(listOfInputs)
     let matchingLists = true;
-    if(pressCount == gameList.length)
+    for (let i = 0; i < pressCount; i++) {
+        if (listOfInputs[i] != gameList[i])
+            matchingLists = false;
+    }
+
+    if(matchingLists == true && pressCount == gameList.length)
+        console.log("You won baybeee")
+    else if(matchingLists == false)
     {
-        
+        console.log("wow you suck");
     }
 }
 
