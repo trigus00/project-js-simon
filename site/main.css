@@ -40,7 +40,25 @@ html {
   font-size: 40px;
   font-family: sans-serif;
 }
+.button {
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 15px;
+}
+.start-button {
+    background-color: seagreen;
 
+}
+.end-button {
+  background-color: red ;
+}
 .simon-button.green {
   background-color: #21BA45;
 }

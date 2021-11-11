@@ -3,6 +3,15 @@
 let canPush = true;
 let gameList = []
 
+// Start game 
+const start = document.querySelector("button .start-button");
+
+start.addEventListener('click', function (){
+    console.log("im here")
+}
+)
+
+
 function createList(list) {
     let randomButton = Math.floor(Math.random() * 4);
     switch (randomButton) {
