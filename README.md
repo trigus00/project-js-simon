@@ -233,14 +233,10 @@ There are *so* many unknown unknowns here. You have to focus on the simpler part
 
 A page with four buttons that light up and play sound as a user clicks is still a neat experience, even if it isn't a full Simon game.
 
-## Extra Libraries
-
-You're free to use any libraries, tools, or technologies you think are appropriate. One common one is [jQuery][url-jquery]. You can modify the files any way you want: edit them, add code to them, create more files, etc.
+## Debugging
 
 You can use `console.log` to see what your code is doing. It will be displayed in the debugging console, which you can activate by right-clicking the page, selecting *Inspect Element*, and then clicking the *Console* tab.
 
 If you're using Chrome on a Mac, you can also open it with `Command + Option + j`.
 
 [url-developer-console]: https://support.airtable.com/hc/en-us/articles/232313848-How-to-open-the-developer-console#:~:text=To%20open%20the%20developer%20console%20window%20on%20Chrome%2C%20use%20the,then%20select%20%22Developer%20Tools.%22
-[url-jquery]: https://api.jquery.com/
-[youtube-beep-beep-jeep]: https://www.youtube.com/watch?v=IM9IyRua6VE
