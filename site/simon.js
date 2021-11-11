@@ -1,23 +1,57 @@
 // This file contains the game logic.
 // All the event-listening should happen in buttons.js
 
-function createList(listToFollow) {
+function createList(list) {
     let randomButton = Math.floor(Math.random() * 4);
     switch (randomButton) {
         case 0:
-            listToFollow.push("green");
+            list.push("green");
             break;
         case 1:
-            listToFollow.push("red");
+            list.push("red");
             break;
         case 2:
-            listToFollow.push("blue");
+            list.push("blue");
             break;
         case 3:
-            listToFollow.push("yellow");
+            list.push("yellow");
             break;
     }
-    console.log(listToFollow);
+    displayList(list)
+}
+
+async function displayList(list) {
+    console.log(list)
+    let tempButton = document.querySelector(`.simon-button.${list[0]}`);
+    tempButton.classList.add('pressed');
+    var audio = new Audio("simonSound1.mp3");
+    audio.play();
+    if (list.length > 1) {
+        for (let i = 1; i < list.length; i++) {
+            await new Promise((resolve) => setTimeout(function() {
+                tempButton.classList.remove('pressed');
+                resolve();
+            }, 700 - (list.length * 25)))
+            await new Promise((resolve) => setTimeout(function () {
+                tempButton = document.querySelector(`.simon-button.${list[i]}`)
+                tempButton.classList.add('pressed');
+                var audio = new Audio("simonSound1.mp3");
+                audio.play();
+                resolve();
+            }, 300 - (list.length * 12.5)))
+        }
+    }
+    else
+    {
+        setTimeout(function()
+        {
+            tempButton.classList.remove('pressed');
+        }, 500)
+    }
+}
+function fakeUnpress(color) {
+    let tempButton = document.querySelector(`.simon-button.${color}`);
+    tempButton.classList.remove('pressed');
 }
 
 function compareList(listOfInputs, pressCount) {
@@ -28,14 +62,14 @@ function compareList(listOfInputs, pressCount) {
             matchingLists = false;
     }
 
-    if(matchingLists == true && pressCount == gameList.length)
+    if (matchingLists == true && pressCount == gameList.length)
         console.log("You won baybeee")
-    else if(matchingLists == false)
-    {
+    else if (matchingLists == false) {
         console.log("wow you suck");
     }
 }
 
 let gameList = [];
-createList(gameList);
-createList(gameList);
+//createList(gameList);
+//createList(gameList);
+displayList(['green', 'blue', 'red', 'yellow', 'green', 'green'])
