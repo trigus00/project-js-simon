@@ -17,7 +17,15 @@ greenButton.addEventListener('mousedown', function () {
 
     listOfButtons.push("green")
     pressCounter++;
-    compareList(listOfButtons, pressCounter)
+    let compare = compareList(listOfButtons, pressCounter)
+    if(compare == false)
+      loseGame();
+    else if(pressCounter == gameList.length && compare == true)
+    {
+      listOfButtons = [];
+      pressCounter = 0;
+      continueGame();
+    }
   }
 });
 greenButton.addEventListener('mouseup', function () {
@@ -41,7 +49,15 @@ redButton.addEventListener('mousedown', function () {
 
     listOfButtons.push("red")
     pressCounter++;
-    compareList(listOfButtons, pressCounter)
+    let compare = compareList(listOfButtons, pressCounter)
+    if(compare == false)
+      loseGame();
+    else if(pressCounter == gameList.length && compare == true)
+    {
+      listOfButtons = [];
+      pressCounter = 0;
+      continueGame();
+    }
   }
 });
 redButton.addEventListener('mouseup', function () {
@@ -63,7 +79,15 @@ yellowButton.addEventListener('mousedown', function () {
 
     listOfButtons.push("yellow")
     pressCounter++
-    compareList(listOfButtons, pressCounter)
+    let compare = compareList(listOfButtons, pressCounter)
+    if(compare == false)
+      loseGame();
+    else if(pressCounter == gameList.length && compare == true)
+    {
+      listOfButtons = [];
+      pressCounter = 0;
+      continueGame();
+    }
   }
 });
 yellowButton.addEventListener('mouseup', function () {
@@ -84,7 +108,15 @@ blueButton.addEventListener('mousedown', function () {
     blueButton.classList.add('pressed');
     listOfButtons.push("blue")
     pressCounter++;
-    compareList(listOfButtons, pressCounter)
+    let compare = compareList(listOfButtons, pressCounter)
+    if(compare == false)
+      loseGame();
+    else if(pressCounter == gameList.length && compare == true)
+    {
+      listOfButtons = [];
+      pressCounter = 0;
+      continueGame();
+    }
   }
 });
 blueButton.addEventListener('mouseup', function () {

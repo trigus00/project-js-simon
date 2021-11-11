@@ -4,12 +4,12 @@ let canPush = true;
 let gameList = []
 
 // Start game 
-const start = document.querySelector("button .start-button");
+/*const start = document.querySelector("button .start-button");
 
 start.addEventListener('click', function (){
     console.log("im here")
 }
-)
+)*/
 
 
 function createList(list) {
@@ -77,14 +77,11 @@ function compareList(listOfInputs, pressCount) {
     let matchingLists = true;
     for (let i = 0; i < pressCount; i++) {
         if (listOfInputs[i] != gameList[i])
-            matchingLists = false;
+            return false;
     }
 
-    if (matchingLists == true && pressCount == gameList.length)
-        continueGame();
-    else if (matchingLists == false) {
-        loseGame();
-    }
+    if (matchingLists == true)
+        return true;
 }
 
 /*let gameList = [];
@@ -111,4 +108,4 @@ function loseGame()
     console.log("Wow you suck. Play again?");
 }
 
-startGame()
+//startGame()
