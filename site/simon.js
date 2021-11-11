@@ -105,6 +105,7 @@ function continueGame()
 }
 function loseGame()
 {
+    document.getElementById("h2").innerHTML = "Wow you suck. Play again?";
     console.log("Wow you suck. Play again?");
 }
 
