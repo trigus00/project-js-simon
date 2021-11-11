@@ -34,15 +34,10 @@ The video is less than 90 seconds long. You have the time.
   - Add everyone in the group as the collaborator to that fork
 1. Clone the fork to your computer using `git clone`
 1. Run `npm install` inside the project directory
-1. Deploy to surge using `npm run publish` — this runs `surge` for you.
 
-The `site/` directory is where the HTML, CSS, and JS live. You can deploy it with surge "by hand" with the following command (from inside the project directory):
 
-```console
-surge site/ my-cool-simon-game.surge.sh
-```
+The `site/` directory is where the HTML, CSS, and JS live. You can change this folder name to docs before you deploy it using github pages.  :
 
-Replace `my-cool-simon-game.surge.sh` with your own URL.
 
 See <https://github.com/jfarmer/intro-git#pushing-changes-to-github> for a reminder of how to push code up to GitHub.
 
